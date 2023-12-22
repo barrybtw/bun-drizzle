@@ -2,13 +2,15 @@
 
 ## Development
 
+Get a [PlanetScale](https://planetscale.com/) database up and running
+
 First, move the `.env.example` file to `.env` like this:
 
 ```bash
 mv .env.example .env
 ```
 
-Fill out each variable
+Fill out each variable from PlanetScale's Connect menu with Drizzle selected
 
 To start the development server run:
 
