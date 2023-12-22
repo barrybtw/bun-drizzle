@@ -1,15 +1,22 @@
 {
   "name": "bun-drizzle",
-  "version": "1.0.50",
+  "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "db:migrate": "bun run src/db.migrate.ts",
+    "db:generate": "drizzle-kit generate:mysql",
+    "db:push": "drizzle-kit push:mysql"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@lucia-auth/adapter-mysql": "^2.1.0",
+    "@planetscale/database": "^1.13.0",
+    "drizzle-orm": "^0.29.1",
+    "elysia": "latest",
+    "lucia": "^2.7.5"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "drizzle-kit": "^0.20.7"
   },
   "module": "src/index.js"
 }
